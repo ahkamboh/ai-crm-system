@@ -1,36 +1,192 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI CRM System  
 
-## Getting Started
+An advanced Customer Relationship Management (CRM) system with multi-channel communication, role-based access, and AI-powered automation. Manage customer queries, track sales, and handle appointments efficiently, all in one platform.  
 
-First, run the development server:
+## Features  
 
+- 🤖 **AI-Powered Insights**  
+  - Customer behavior analysis  
+  - Predictive sales forecasting  
+  - Task automation recommendations  
+
+- 💬 **Multi-Channel Communication**  
+  - Seamlessly integrate with Instagram, WhatsApp, Facebook, and chat platforms  
+  - Unified inbox for managing customer interactions  
+
+- 📊 **Interactive Dashboard**  
+  - Real-time analytics  
+  - Performance metrics  
+  - Customer activity tracking  
+
+- 👥 **Role-Based Access**  
+  - Admin: Manage users, roles, and settings  
+  - Manager: Oversee agents and analyze reports  
+  - Agent: Handle customer queries and interactions  
+
+- 📈 **Sales Pipeline Management**  
+  - Track deals and progress  
+  - Revenue forecasting  
+  - Sales performance metrics  
+
+- 📅 **Appointment Scheduling**  
+  - AI-assisted scheduling  
+  - Automated follow-ups  
+
+- 🔍 **Query Management**  
+  - Track and prioritize customer queries  
+  - Resolve tickets efficiently  
+
+- 🔒 **Secure Authentication**  
+  - NextAuth.js integration  
+
+## Tech Stack  
+
+- **Frontend:** Next.js 14 with App Router  
+- **Styling:** Tailwind CSS + Shadcn/ui  
+- **Backend:** Node.js (Express.js) + Heroku  
+- **Database:** Vercel Postgres  
+- **Authentication:** NextAuth.js  
+- **AI Integration:** OpenAI API  
+- **Deployment:** Vercel (frontend) and Heroku (backend)  
+
+## Getting Started  
+
+### Prerequisites  
+
+- Node.js 18+  
+- npm/pnpm/yarn  
+- PostgreSQL database  
+
+### Installation  
+
+1. Clone the repository:  
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone https://github.com/ahkamboh/ai-crm-system.git  
+cd ai-crm-system  
+```  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:  
+```bash
+npm install  
+# or  
+pnpm install  
+```  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:  
+```bash
+cp .env.example .env  
+```  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Fill in your `.env` file with:  
+```plaintext
+# Database  
+POSTGRES_URL=your_database_url  
 
-## Learn More
+# Authentication  
+NEXTAUTH_URL=http://localhost:3000  
+NEXTAUTH_SECRET=your_secret  
 
-To learn more about Next.js, take a look at the following resources:
+# OpenAI  
+OPENAI_API_KEY=your_api_key  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Social Media API Keys  
+INSTAGRAM_API_KEY=your_instagram_api_key  
+WHATSAPP_API_KEY=your_whatsapp_api_key  
+FACEBOOK_API_KEY=your_facebook_api_key  
+```  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Run the development server:  
+```bash
+npm run dev  
+# or  
+pnpm dev  
+```  
 
-## Deploy on Vercel
+Visit [http://localhost:3000](http://localhost:3000) to see your application.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```plaintext
+ai-crm-system/  
+├── app/  
+│   ├── (auth)/  
+│   ├── (dashboard)/  
+│   ├── api/  
+│   └── layout.tsx  
+├── components/  
+│   ├── ui/  
+│   └── shared/  
+├── lib/  
+│   ├── utils.ts  
+│   └── db.ts  
+├── public/  
+└── styles/  
+```  
+
+## Key Features Explained  
+
+### Multi-Channel Communication  
+- Manage Instagram, WhatsApp, Facebook, and other chat interactions on a single platform.  
+- Unified query tracking and resolution.  
+
+### Role-Based Access  
+- **Admin:** Full control over users, roles, and platform settings.  
+- **Manager:** Supervises agents, monitors performance, and generates reports.  
+- **Agent:** Handles customer interactions and resolves tickets.  
+
+### Query Management  
+- Automate query assignment based on priority.  
+- Monitor response times and query status.  
+
+## Development Guidelines  
+
+- Follow the [Next.js best practices](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts).  
+- Use TypeScript for type safety.  
+- Implement responsive design.  
+- Write unit tests for critical functions.  
+- Follow [Conventional Commits](https://www.conventionalcommits.org/).  
+
+## Deployment  
+
+### Frontend (Vercel)  
+1. Push your code to GitHub.  
+2. Connect your repository to Vercel.  
+3. Configure environment variables.  
+4. Deploy!  
+
+### Backend (Heroku)  
+1. Create a new Heroku app.  
+2. Set up environment variables.  
+3. Push your backend code to Heroku.  
+4. Deploy!  
+
+## Contributing  
+
+1. Fork the repository.  
+2. Create your feature branch (`git checkout -b feature/amazing-feature`).  
+3. Commit your changes (`git commit -m 'Add some amazing feature'`).  
+4. Push to the branch (`git push origin feature/amazing-feature`).  
+5. Open a Pull Request.  
+
+## License  
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
+
+## Support  
+
+For support, please:  
+- Open an [issue](https://github.com/ahkamboh/ai-crm-system/issues)  
+- Contact: [your-email@example.com]  
+
+## Acknowledgments  
+
+- [Next.js](https://nextjs.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Shadcn/ui](https://ui.shadcn.com/)  
+- [OpenAI](https://openai.com/)  
+
+---  
+
+Built with ❤️ by [ahkamboh](https://github.com/ahkamboh)  
+
+Let me know if you’d like any additional refinements! 🚀
