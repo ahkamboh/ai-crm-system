@@ -1,6 +1,7 @@
 # AI CRM System  
 
 An advanced Customer Relationship Management (CRM) system with multi-channel communication, role-based access, and AI-powered automation. Manage customer queries, track sales, and handle appointments efficiently, all in one platform.  
+![image](https://github.com/user-attachments/assets/f18ef827-0854-4ee3-8c62-ee3b7c0fc7f0)
 
 ## Features  
 
